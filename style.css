@@ -1,0 +1,729 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background: url("https://c4.wallpaperflare.com/wallpaper/707/220/899/gradient-blue-pink-abstract-art-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100wh;
+  }
+  
+.home {
+    position: fixed;
+    height: 400px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    display: block;
+}
+
+.home.home_hide {
+    display: none;
+}
+
+.home .container {
+    padding: 7px;
+    margin: 0;
+    position: relative;
+}
+
+/****************** Login Form Container ******************/
+
+.form_login_container {
+    height: 385px;
+    width: 335px;
+    padding: 5px;
+    display: block;
+}
+
+.form_login_container.login_show {
+    display: none;
+}
+
+.form_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_container h2 {
+    color: whitesmoke;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    user-select: none;
+}
+
+.form_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.email_input1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin-top: 7px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.email_input1.show::after {
+    content: "";
+    position: absolute;
+    border: 2px solid red;
+    height: 50px;
+    width: 130%;
+    left: -10%;
+    border-radius: 5px;
+}
+
+.email_input1 i {
+    font-size: 25px;
+    margin-right: 5px;
+    color: white;
+}
+
+.email_input1 input {
+    height: 40px;
+    width: 80%;
+    background: transparent;
+    color: whitesmoke;
+    padding: 8px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    letter-spacing: 1.2px;
+}
+
+.email_input1 input::placeholder {
+    color: whitesmoke;
+}
+
+.password_input {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: 13px;
+    position: relative;
+}
+
+.password_input i:nth-child(1) {
+    font-size: 25px;
+    margin-right: 5px;
+    color: white;
+}
+
+.password_input i:nth-child(3) {
+    position: absolute;
+    color: white;
+    right: 6%;
+    cursor: pointer;
+}
+
+.password_input input {
+    height: 40px;
+    width: 80%;
+    background: transparent;
+    color: whitesmoke;
+    padding: 8px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    letter-spacing: 1.2px;
+}
+
+.password_input input::placeholder {
+    color: whitesmoke;
+}
+
+.form_container button {
+    margin-top: 25px;
+    padding: 15px 25px;
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(224, 206, 206);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+}
+
+.form_container button:hover {
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    border: 1px solid rgb(215, 38, 38);
+}
+
+.login_signup {
+    position: absolute;
+    bottom: 11%;
+    color: white;
+}
+
+.error_heading1,
+.error_heading2 {
+    position: absolute;
+    bottom: 4%;
+    left: 5%;
+    color: rgb(0, 255, 0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 1, 1);
+    letter-spacing: 0.9px;
+}
+
+.login_signup a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.login_signup a:hover {
+    text-decoration: underline;
+}
+
+
+.pop-up-message {
+    position: absolute;
+    width: 100%;
+    height: 12%;
+    border: 1px solid white;
+    border-radius: 8px;
+    top: -20%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px -25px 20px -20px rgba(0, 0, 0, 0.45), 25px 0 20px -20px rgba(0, 0, 0, 0.45), 0px 25px 20px -20px rgba(0, 0, 0, 0.45), -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+    transition: all 0.9s cubic-bezier(0.4, 0, 1, 1)-out;
+    color: white;
+    display: none;
+}
+
+.pop-up-message .showing {
+    display: block;
+}
+
+/****************** Signup Form Container ******************/
+
+.form_signup_container {
+    position: fixed;
+    height: 400px;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.form_signup_container.signup_show {
+    display: block;
+}
+
+.signup_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup_container h2 {
+    color: whitesmoke;
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    user-select: none;
+}
+
+.name_input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 7px;
+    margin-bottom: 10px;
+}
+
+.name_input i {
+    font-size: 25px;
+    margin-right: 5px;
+    color: white;
+}
+
+.name_input input {
+    height: 40px;
+    width: 80%;
+    background: transparent;
+    color: whitesmoke;
+    padding: 8px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    letter-spacing: 1.2px;
+}
+
+.name_input input::placeholder {
+    color: whitesmoke;
+}
+
+.signup_container button {
+    margin-top: 5px;
+    padding: 15px 25px;
+    width: 90%;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(224, 206, 206);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+}
+
+.signup_container button:hover {
+    background: linear-gradient(to right, #24243e, #3b3580, #37307b);
+    border: 1px solid rgb(215, 38, 38);
+}
+
+
+/**************** Quiz Application *******************/
+
+.quiz_Application {
+    position: fixed;
+    height: 350px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.quiz_Application.Quiz_show {
+    display: block;
+}
+
+.info_container .info_title {
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 35px;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-top: 15px;
+}
+
+.info_container .info_list {
+    padding: 18px 35px;
+}
+
+.info_container .info_list .info {
+    margin: 5px 0px;
+    font-size: 17px;
+}
+
+.info_container .info_list .info span {
+    font-weight: 700;
+    color: lightgreen;
+}
+
+.info_list .info p {
+    color: white;
+    padding: 2px 0px;
+}
+
+.info_container .buttons {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top: 1px solid lightgreen;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    width: 100%;
+}
+
+.info_container .buttons button {
+    margin: 0px 5px;
+    height: 40px;
+    width: 100px;
+    outline: none;
+    border: 1px solid rgb(5, 5, 90);
+    color: red;
+    font-size: 16px;
+    font-weight: 600px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3 cubic-bezier(0.4, 0, 1, 1);
+    position: relative;
+    top: 18px;
+    right: 10px;
+}
+
+.buttons button.restart:hover {
+    background-color: #ff0066;
+    color: white;
+}
+
+.buttons button.exit {
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.buttons button.exit:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: #2b2b6c;
+}
+
+.buttons button.continue {
+    font-size: 16px;
+    color: white;
+    background-color: transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.buttons button.continue:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: #2b2b6c;
+}
+
+/************* Quiz Box Container *************/
+
+.Quiz {
+    position: fixed;
+    height: 465px;  
+    width: 550px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.Quiz.Quiz_Box_show {
+    display: block;
+}
+
+.quiz_box header {
+    height: 70px;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 19;
+}
+
+.quiz_box header .name_heading {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.quiz_box header .name_heading .title {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1.2px;
+    word-spacing: 4px;
+    margin-top: 5px;
+    user-select: none;
+}
+
+.quiz_box header .timer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    height: 42px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 0 8px;
+    color: white;
+}
+
+.quiz_box header .timer .timer_min {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    height: 30px;
+    width: 100px;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.quiz_box .section {
+    padding: 25px 30px 20px 30px;
+}
+
+.quiz_box section .que_text {
+    font: 25px;
+    font-weight: 600;
+    color: white;
+    margin-top: 15px;
+}
+
+.que_text p {
+    position: absolute;
+    right: 0;
+    top: 18%;
+    margin-right: 35px;
+    color: aqua;
+    pointer-events: none;
+    font-size: 17px;
+}
+
+.quiz_box section .option_list {
+    display: block;
+}
+
+.option_list input {
+    position: relative;
+    top: 28px;
+    left: 20px;
+    border: 1px solid #84c5f8;
+    background-color: red;
+}
+
+section .option_list .option {
+    color: white;
+    border: 1px solid #84c5f8;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3 cubic-bezier(0.4, 0, 1, 1);
+}
+
+section .option_list .option:hover {
+    background-color: rgb(5, 5, 34);
+    border-color: white;
+}
+
+section .option_list .option span {
+    margin-left: 40px;
+}
+
+.option_list .option:last-child {
+    margin-bottom: 0px;
+}
+
+.option_list .option.disabled {
+    pointer-events: none;
+}
+
+.quiz_box footer {
+    height: 60px;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 4%;
+}
+
+.quiz_box footer .total_que span {
+    display: flex;
+    user-select: none;
+    color: white;
+}
+
+footer .total_que span p {
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.total_que span p:first-child {
+    padding-left: 0px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn .next button {
+    padding: 8px 20px;
+    margin-left: 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(224, 206, 206);
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.btn .next button:hover {
+    background: #0263ca;
+}
+
+.btn .back button {
+    padding: 8px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(224, 206, 206);
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.btn .back button:hover {
+    background: #0263ca;
+}
+
+
+/***************** Result Box***************************/
+
+.result {
+    position: fixed;
+    height: 600px;
+    width: 800px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    border: 1px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-radius: 5px;
+    display: none;
+}
+
+.result.result_show {
+    display: block;
+}
+
+
+.result_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px 20px;
+}
+
+.result_box .icon i {
+    font-size: 50px;
+    color: white;
+    align-items: center;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.result_box .complete_test p {
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.result_box .result_table {
+    padding: 10px 0px;
+    margin-top: 10px;
+}
+
+.result_table caption {
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 5px
+}
+
+th {
+    padding: 10px;
+}
+
+.result_table .table {
+    justify-content: center;
+    background-color: transparent;
+}
+
+.result_table .table tr {
+    color: white;
+}
+
+.result_table .table tr td {
+    padding: 10px 15px;
+}
+
+.buttons1 {
+    margin-top: 40px;
+    position: fixed;
+    bottom: 50px;
+}
+
+
+.buttons1 .restart,
+.buttons1 .quit,
+.buttons1 .Result_show {
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid rgb(224, 206, 206);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.buttons1 .restart:hover,
+.buttons1 .quit:hover,
+.buttons1 .Result_show:hover {
+    background: linear-gradient(to right, #24243e, #3b3580, #37307b);
+    border: 1px solid rgb(215, 38, 38);
+}
+

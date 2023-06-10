@@ -1,0 +1,276 @@
+/* Media Query */
+
+@media only screen and (max-width: 480px) {
+    .home {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 350px;
+        width: 280px;
+    }
+
+    .form_login_container {
+        height: 325px;
+        width: 250px;
+    }
+
+
+    .form_login_container h2 {
+        font-size: 22px;
+        margin-bottom: 13px;
+    }
+
+    .email_input1,
+    .password_input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        margin: 3%;
+    }
+
+    .email_input1 i {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .email_input1 input,
+    .password_input input {
+        height: 40px;
+        width: 100%;
+        padding: 8px;
+        font-size: 17px;
+        letter-spacing: 1.2px;
+    }
+
+    .email_input1 input::placeholder,
+    .password_input input::placeholder {
+        color: whitesmoke;
+        font-size: 17px;
+    }
+
+    .password_input input {
+        width: 100%;
+    }
+
+    .password_input i:nth-child(1) {
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .password_input i:nth-child(3) {
+        position: absolute;
+        right: 0;
+        font-size: 15px;
+    }
+
+    .form_container button {
+        margin-top: 16px;
+        padding: 12px 25px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .login_signup {
+        position: absolute;
+        bottom: 37px;
+    }
+
+    .error_heading1 {
+        position: absolute;
+        bottom: 1%;
+    }
+
+
+
+    /* Signup Page */
+
+    .form_signup_container {
+        /* border: 2px solid white; */
+        height: 350px;
+        width: 250px;
+    }
+
+    .signup_container h2 {
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 13px;
+    }
+
+    .name_input,
+    .email_input1,
+    .password_input {
+        width: 90%;
+    }
+
+    .name_input i,
+    .email_input1 i,
+    .password_input i {
+        font-size: 18px;
+    }
+
+    .name_input input,
+    .email_input1 input,
+    .password_input input {
+        height: 40px;
+        padding: 8px;
+        font-size: 17px;
+        letter-spacing: 1.2px;
+    }
+
+    .name_input input::placeholder,
+    .email_input1 input::placeholder,
+    .password_input input::placeholder {
+        font-size: 17px;
+    }
+
+    .signup_container .name_input {
+        margin-bottom: 0px;
+        margin-top: 5px;
+        margin-left: -11px;
+    }
+
+    .form_signup_container button {
+        margin-top: 6px;
+        padding: 12px 25px;
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .login_signup.login {
+        position: absolute;
+        bottom: 41px;
+    }
+
+    .error_heading2 {
+        position: absolute;
+        bottom: 3%;
+    }
+
+
+    /**************** Quiz Application *******************/
+
+    .quiz_Application {
+        height: 350px;
+        width: 370px;
+    }
+
+    .info_title span {
+        font-size: 18px;
+    }
+
+    .info_container .info_list {
+        padding: 14px 16px;
+    }
+
+    .info_container .info_list .info {
+        margin: 5px 0px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .info_container .info_title {
+        height: 52px;
+    }
+
+    .info_container .buttons {
+        position: absolute;
+        bottom: 2px;
+    }
+
+    .info_container .buttons button {
+        position: relative;
+        top: 6px;
+        font-size: 15px;
+        width: 77px;
+        height: 36px;
+        padding: 0px;
+    }
+
+    .Quiz {
+        height: 410px;
+        width: 355px;
+    }
+
+    .quiz_box header .name_heading .title {
+        font-size: 15px;
+    }
+
+    .quiz_box header .timer {
+        width: 84px;
+        height: 35px;
+    }
+
+    .quiz_box header .timer .timer_min {
+        font-size: 15px;
+    }
+
+    .quiz_box section .que_text {
+        font-size: 14px;
+    }
+
+    .que_text p {
+        font-size: 16px;
+        margin-top: 11px;
+    }
+
+    section .option_list .option {
+        padding: 6px 15px;
+        font-size: 14px;
+    }
+
+    .quiz_box footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .quiz_box footer .total_que span {
+        font-size: 14px;
+        margin-bottom: 17px;
+    }
+
+    .btn .next button,
+    .btn .back button {
+        font-size: 14px;
+        padding: 6px 3px;
+        height: 29px;
+        width: 60px;
+        margin-bottom: 18px;
+    }
+
+    .result {
+        height: 450px;
+        width: 415px;
+        /* border: 2px solid white; */
+    }
+
+    .result_box .icon i {
+        font-size: 35px;
+    }
+
+    .result_box .complete_test p {
+        font-size: 16px;
+    }
+
+    .nameHeading h1 {
+        font-size: 20px;
+    }
+
+    .resultHeading th,
+    .marks_storing td {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    .result_table .table tr td {
+        padding: 6px 8px;
+    }
+
+    .buttons1 .restart,
+    .buttons1 .quit,
+    .buttons1 .Result_show{
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+}

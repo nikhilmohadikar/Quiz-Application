@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+
+  <!-- CSS Link -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobileSize.css">
+
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/99e4a8e3d4.js" crossorigin="anonymous"></script>
+
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+
+<body>
+  <section class="home">
+    <div class="container">
+      <!-- Login Form Container -->
+      <div class="form_login_container">
+        <form action="#" class="form_container">
+          <h2>Login Form</h2>
+          <div class="email_input1">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="email_input" name="email" placeholder="Enter Email" required />
+          </div>
+          <div class="password_input">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" id="password_input" placeholder="Enter Password" required />
+            <i class="fa-regular fa-eye-slash eye_show"></i>
+          </div>
+
+          <button class="button login">Login</button>
+
+          <div class="login_signup">Don't have an account ? <a href="#" id="signup">Signup</a></div>
+          <div class="error_heading1">
+            <span class="error_showing1"></span>
+          </div>
+        </form>
+      </div>
+
+
+
+      <!-- Signup Form Container -->
+      <div class="form_signup_container">
+        <form action="#" class="signup_container">
+          <h2>Signup Form</h2>
+          <div class="name_input">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" id="user_name" name="name" placeholder="Enter Name" required />
+          </div>
+          <div class="email_input1">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" id="user_email" name="email" placeholder="Enter Email" required />
+          </div>
+          <div class="password_input">
+            <i class="fa-solid fa-key"></i>
+            <input type="password" id="user_password" name="password" placeholder="Enter Password" required />
+            <i class="fa-regular fa-eye-slash eye_show"></i>
+          </div>
+
+          <button class="button signup">Signup</button>
+
+          <div class="login_signup login">Already have an account? <a href="#" id="login">Login</a></div>
+          <div class="error_heading2">
+            <span class="error_showing2"></span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="quiz_Application" id="quiz_application">
+    <div class="info_container">
+      <div class="info_title">
+        <span>Some Rules of this Quiz</span>
+      </div>
+      <div class="info_list">
+        <div class="info">
+          <p>
+            1. You have only <span>15 Minutes</span> to solve questions.
+          </p>
+        </div>
+        <div class="info">
+          <p>
+            2. Once you select answer you can't reselect.
+          </p>
+        </div>
+        <div class="info">
+          <p>
+            3. You can't exit from the Quiz while you're playing.
+          </p>
+        </div>
+        <div class="info">
+          <p>
+            4. You'll get points on the basis of your correct options.
+          </p>
+        </div>
+        <div class="info">
+          <p>
+            5. There is a negative marking if question wrong.
+          </p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="exit">Exit Quiz</button>
+        <button class="continue">Continue</button>
+      </div>
+    </div>
+  </section>
+  <section class="Quiz">
+    <!-- Quiz Box -->
+    <div class="quiz_box">
+      <header>
+        <div class="name_heading">
+          <!-- <div class="title">Quiz Application</div> -->
+          <!-- <div class="welcome_name">Welcome, Nikhil</div> -->
+        </div>
+        <div class="timer">
+          <!-- <div class="time_text">Remaining Time</div> -->
+          <div class="timer_min">15.00</div>
+        </div>
+      </header>
+      <section class="section">
+        <div class="que_text">
+          <!-- <span>1. There are ___ levels of heading in HTML</span> -->
+          <!-- <p>2 Marks</p> -->
+        </div>
+        <div class="option_list">
+          <!-- <input type="radio" name="question" id="que1" class="icons"><label for="que1" class="option"><div><span>Three</span></div></label>
+          <input type="radio" name="question" id="que2" class="icons"><label for="que2" class="option"><div><span>Four</span></div></label>
+          <input type="radio" name="question" id="que3" class="icons"><label for="que3" class="option"><div><span>Five</span></div></label>
+          <input type="radio" name="question" id="que4" class="icons"><label for="que4" class="option"><div><span>Six</span></div></label> -->
+        </div>
+      </section>
+
+      <!-- Quiz Box Footer -->
+      <footer class="endline">
+        <div class="total_que">
+          <!-- <span><p>1</p>Of<p>30</p>Questions</span> -->
+        </div>
+        <!-- <button class="back">Back</button> -->
+        <p id="timeStop"></p>
+        <div class="btn">
+          <!-- <div class="back"></div> -->
+          <div class="next"></div>
+          <!-- <button class="back" id="back">Back</button>
+          <button class="next">Next</button> -->
+        </div>
+      </footer>
+    </div>
+  </section>
+
+  <section class="result">
+
+    <!-- Result Box -->
+    <div class="result_box">
+      <div class="icon">
+        <i class="fas fa-crown"></i>
+      </div>
+      <div class="complete_test">
+        <p>You've Completed the Quiz!</p>
+      </div>
+      <div class="score_test">
+        <!-- <span>and sorry, You got only <p>1</p> out of <p>30</p></span> -->
+      </div>
+
+      <div class="result_table">
+        <table class="table">
+          <caption class="nameHeading">
+            <h1>Result</h1>
+          </caption>
+          <tbody class="marks_storing">
+            <thead class="resultHeading">
+              <th>Total Questions</th>
+              <th>Correct</th>
+              <th>Incorrect</th>
+              <th>Marks</th>
+              <th>Attempt</th>
+              <th>Time</th>
+              <th>Result</th>
+            </thead>
+          <tbody>
+            <tr id="marks_storing">
+              <!-- <td>30</td>
+                <td>25</td>
+                <td>5</td>
+                <td>10</td> 25/5*100 percentage
+                <td>3</td>
+                <td>1.45</td>
+                <td>Pass</td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="buttons1">
+        <button class="restart">Reply Quiz</button>
+        <!-- <button class="Result_show">Result Show</button> -->
+        <button class="quit">Logout</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="questions.js"></script>
+  <script src="marks.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
